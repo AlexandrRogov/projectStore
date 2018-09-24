@@ -1,0 +1,15 @@
+### Maven ###
+target/
+
+### IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### DBSource ###
+.ideaDataSources
+dataSources/
+
+### Logs
+logs/

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.gmail.rogov</groupId>
+    <artifactId>projectStore</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>projectStore</name>
+    <modules>
+        <module>web</module>
+        <module>dao</module>
+        <module>service</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <jstl>1.2</jstl>
+        <javax.servlet-api>3.1.0</javax.servlet-api>
+        <mysql>6.0.6</mysql>
+        <org.hibernate>5.3.5.Final</org.hibernate>
+        <log4j-core>2.11.0</log4j-core>
+        <log4j-api>2.11.0</log4j-api>
+        <hibernate-java8>5.1.0.Final</hibernate-java8>
+        <hibernate-ehcache>5.2.12.Final</hibernate-ehcache>
+        <hibernate-entitymanager>5.3.3.Final</hibernate-entitymanager>
+        <hibernate.validatior.version>6.0.12.Final</hibernate.validatior.version>
+        <maven-war-plugin>2.6</maven-war-plugin>
+        <commons-lang3>3.8</commons-lang3>
+        <log4j-slf4j-impl>2.1</log4j-slf4j-impl>
+        <spring-webmvc>5.0.9.RELEASE</spring-webmvc>
+        <hibernate-ehcache>5.3.6.Final</hibernate-ehcache>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-ehcache</artifactId>
+            <version>${hibernate-ehcache}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring-webmvc}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>${log4j-slf4j-impl}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${log4j-api}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3}</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>${maven-war-plugin}</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+</project>
